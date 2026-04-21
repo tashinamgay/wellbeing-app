@@ -1,0 +1,63 @@
+/* ============================================================
+   GLOBAL STYLES — CSS variables (design tokens) + resets
+   ============================================================ */
+
+:root {
+  --clr-bg: #f5f3ee;
+  --clr-surface: #ffffff;
+  --clr-primary: #2d6a4f;
+  --clr-primary-light: #52b788;
+  --clr-accent: #e76f51;
+  --clr-text: #1b1b1b;
+  --clr-muted: #6b7280;
+  --clr-border: #e0ddd5;
+  --clr-danger: #ef4444;
+  --clr-warning: #f59e0b;
+  --clr-success: #22c55e;
+
+  /* Outfit replaces Syne — no descender clipping */
+  --font-heading: 'Outfit', sans-serif;
+  --font-body: 'Nunito', sans-serif;
+
+  --radius-sm: 8px;
+  --radius-md: 14px;
+  --radius-lg: 22px;
+
+  --shadow-sm: 0 1px 4px rgba(0,0,0,0.06);
+  --shadow-md: 0 4px 16px rgba(0,0,0,0.10);
+  --shadow-lg: 0 8px 32px rgba(0,0,0,0.13);
+
+  --transition: 0.2s ease;
+}
+
+*, *::before, *::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html { scroll-behavior: smooth; }
+
+body {
+  font-family: var(--font-body);
+  background-color: var(--clr-bg);
+  color: var(--clr-text);
+  line-height: 1.6;
+  font-size: 16px;
+  min-height: 100vh;
+  overflow-x: hidden;
+}
+
+ul, ol { list-style: none; }
+img { max-width: 100%; display: block; }
+a { text-decoration: none; color: inherit; }
+
+:focus-visible {
+  outline: 2px solid var(--clr-primary);
+  outline-offset: 3px;
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar { width: 6px; }
+::-webkit-scrollbar-track { background: var(--clr-bg); }
+::-webkit-scrollbar-thumb { background: var(--clr-border); border-radius: 99px; }

@@ -1,0 +1,88 @@
+/* Appointments page styles */
+
+.page { max-width: 800px; }
+
+/* Status filter tab row */
+.tabs {
+  display: flex;
+  gap: 6px;
+  margin-bottom: 20px;
+  flex-wrap: wrap;
+}
+
+.tab {
+  padding: 8px 18px;
+  border: 1.5px solid var(--clr-border);
+  border-radius: 99px;
+  background: var(--clr-surface);
+  font-family: var(--font-body);
+  font-size: 0.85rem;
+  font-weight: 600;
+  color: var(--clr-muted);
+  cursor: pointer;
+  transition: all var(--transition);
+  text-transform: capitalize;
+}
+
+.tab:hover { border-color: var(--clr-primary); color: var(--clr-primary); }
+
+.tabActive {
+  background: var(--clr-primary);
+  border-color: var(--clr-primary);
+  color: #fff;
+}
+
+/* Appointment list */
+.apptList { display: flex; flex-direction: column; gap: 12px; }
+
+/* Individual appointment card */
+.apptCard { display: flex; flex-direction: column; gap: 12px; }
+
+.apptHeader {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 12px;
+}
+
+.apptTitle { font-weight: 700; font-size: 1rem; margin-bottom: 3px; }
+
+.apptDoctor { font-size: 0.85rem; color: var(--clr-muted); }
+
+.apptDetails {
+  display: flex;
+  gap: 20px;
+  font-size: 0.85rem;
+  color: var(--clr-muted);
+  flex-wrap: wrap;
+}
+
+.cancelBtn { align-self: flex-start; font-size: 0.82rem; padding: 7px 14px; }
+
+/* ---- Form styles (same pattern as Activities) ---- */
+.form    { display: flex; flex-direction: column; gap: 16px; }
+.field   { display: flex; flex-direction: column; gap: 5px; flex: 1; }
+.row     { display: flex; gap: 12px; }
+
+@media (max-width: 480px) { .row { flex-direction: column; } }
+
+.label   {
+  font-size: 0.82rem; font-weight: 700;
+  color: var(--clr-muted); text-transform: uppercase; letter-spacing: 0.04em;
+}
+
+.input   {
+  padding: 10px 12px; border: 1.5px solid var(--clr-border);
+  border-radius: var(--radius-sm); font-family: var(--font-body);
+  font-size: 0.92rem; background: var(--clr-bg);
+  transition: border-color var(--transition); width: 100%;
+}
+
+.input:focus { outline: none; border-color: var(--clr-primary); }
+.inputError  { border-color: var(--clr-danger); }
+.error       { font-size: 0.78rem; color: var(--clr-danger); font-weight: 600; }
+
+.formActions {
+  display: flex; justify-content: flex-end;
+  gap: 10px; margin-top: 4px;
+}

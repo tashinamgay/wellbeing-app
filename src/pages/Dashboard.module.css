@@ -1,0 +1,84 @@
+/* Dashboard page layout */
+
+.page { max-width: 1100px; }
+
+/* 4-column stats grid, collapses on smaller screens */
+.statsGrid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 16px;
+  margin-bottom: 24px;
+}
+
+@media (max-width: 900px) { .statsGrid { grid-template-columns: repeat(2, 1fr); } }
+@media (max-width: 480px) { .statsGrid { grid-template-columns: 1fr; } }
+
+.chartSection { margin-bottom: 24px; }
+
+/* Two-column layout for appointments + goals */
+.bottomGrid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 16px;
+}
+
+@media (max-width: 768px) { .bottomGrid { grid-template-columns: 1fr; } }
+
+/* Section header: title + action side by side */
+.sectionHeader {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 16px;
+}
+
+.sectionTitle {
+  font-family: var(--font-heading);
+  font-size: 1.05rem;
+  font-weight: 700;
+}
+
+/* Appointments list */
+.apptList { display: flex; flex-direction: column; gap: 12px; }
+
+.apptItem {
+  display: flex;
+  align-items: flex-start;
+  gap: 12px;
+  padding: 12px;
+  background: var(--clr-bg);
+  border-radius: var(--radius-sm);
+}
+
+.apptIcon { font-size: 1.3rem; flex-shrink: 0; margin-top: 2px; }
+
+.apptTitle {
+  font-weight: 700;
+  font-size: 0.9rem;
+  margin-bottom: 2px;
+}
+
+.apptMeta { font-size: 0.8rem; color: var(--clr-muted); }
+
+/* Goals list */
+.goalList { display: flex; flex-direction: column; gap: 16px; }
+
+.goalItem { display: flex; flex-direction: column; gap: 6px; }
+
+.goalTop {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.goalTitle { font-size: 0.88rem; font-weight: 600; }
+
+.goalPct {
+  font-size: 0.82rem;
+  font-weight: 700;
+  color: var(--clr-primary);
+}
+
+.goalMeta { font-size: 0.75rem; color: var(--clr-muted); }
+
+.emptyMsg { color: var(--clr-muted); font-size: 0.9rem; }

@@ -1,0 +1,67 @@
+/* Loading spinner and error message component styles */
+
+/* ---- Spinner ---- */
+.spinnerWrap {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 60px 20px;
+  gap: 16px;
+}
+
+/* Rotating ring built with border-trick */
+.spinner {
+  width: 40px;
+  height: 40px;
+  border: 3px solid var(--clr-border);
+  border-top-color: var(--clr-primary);
+  border-radius: 50%;
+  animation: spin 0.7s linear infinite;
+}
+
+@keyframes spin {
+  to { transform: rotate(360deg); }
+}
+
+.spinnerText {
+  color: var(--clr-muted);
+  font-size: 0.9rem;
+  font-weight: 600;
+}
+
+/* ---- Error ---- */
+.errorWrap {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 48px 20px;
+  gap: 12px;
+  text-align: center;
+}
+
+.errorIcon { font-size: 2rem; }
+
+.errorText {
+  color: var(--clr-danger);
+  font-weight: 600;
+  font-size: 0.95rem;
+  max-width: 320px;
+}
+
+.retryBtn {
+  margin-top: 4px;
+  padding: 9px 20px;
+  background: var(--clr-primary);
+  color: #fff;
+  border: none;
+  border-radius: var(--radius-sm);
+  font-family: var(--font-body);
+  font-size: 0.88rem;
+  font-weight: 700;
+  cursor: pointer;
+  transition: background var(--transition);
+}
+
+.retryBtn:hover { background: #245a41; }

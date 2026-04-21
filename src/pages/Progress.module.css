@@ -1,0 +1,128 @@
+/* Progress page styles */
+
+.page { max-width: 900px; }
+
+/* Summary stat chips row */
+.summaryRow {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 14px;
+  margin-bottom: 24px;
+}
+
+@media (max-width: 768px) { .summaryRow { grid-template-columns: repeat(2, 1fr); } }
+@media (max-width: 400px) { .summaryRow { grid-template-columns: 1fr; } }
+
+.summaryChip {
+  background: var(--clr-surface);
+  border: 1px solid var(--clr-border);
+  border-radius: var(--radius-md);
+  padding: 18px 16px;
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+  box-shadow: var(--shadow-sm);
+}
+
+.chipLabel {
+  font-size: 0.75rem;
+  font-weight: 700;
+  color: var(--clr-muted);
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+.chipValue {
+  font-family: var(--font-heading);
+  font-size: 1.9rem;
+  font-weight: 800;
+  line-height: 1.1;
+}
+
+.chipUnit {
+  font-size: 0.78rem;
+  color: var(--clr-muted);
+}
+
+/* Chart card */
+.chartCard { margin-bottom: 24px; }
+
+.chartHeader {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 20px;
+  flex-wrap: wrap;
+  gap: 12px;
+}
+
+.sectionTitle {
+  font-family: var(--font-heading);
+  font-size: 1.05rem;
+  font-weight: 700;
+}
+
+/* Chart type selector tabs */
+.chartTabs {
+  display: flex;
+  gap: 4px;
+  background: var(--clr-bg);
+  border-radius: var(--radius-sm);
+  padding: 4px;
+}
+
+.chartTab {
+  padding: 6px 14px;
+  border: none;
+  border-radius: 6px;
+  background: transparent;
+  font-family: var(--font-body);
+  font-size: 0.83rem;
+  font-weight: 600;
+  color: var(--clr-muted);
+  cursor: pointer;
+  transition: all var(--transition);
+}
+
+.chartTab:hover { color: var(--clr-text); }
+
+.chartTabActive {
+  background: var(--clr-surface);
+  color: var(--clr-primary);
+  box-shadow: var(--shadow-sm);
+}
+
+/* Activity breakdown */
+.breakdownCard {}
+
+.breakdownGrid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 14px;
+}
+
+@media (max-width: 480px) { .breakdownGrid { grid-template-columns: 1fr; } }
+
+.breakdownItem {
+  background: var(--clr-bg);
+  border-radius: var(--radius-sm);
+  padding: 16px;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.breakdownTop {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.breakdownCount { font-size: 0.8rem; color: var(--clr-muted); font-weight: 600; }
+
+.breakdownStat {
+  font-family: var(--font-heading);
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: var(--clr-text);
+}

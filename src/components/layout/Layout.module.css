@@ -1,0 +1,24 @@
+/* Page layout: sidebar + scrollable main */
+
+.layout {
+  display: flex;
+  min-height: 100vh;
+}
+
+/* Main content area — offset for sidebar, overflow:visible prevents clipping */
+.main {
+  margin-left: 260px;
+  flex: 1;
+  min-height: 100vh;
+  padding: 40px 32px 32px;
+  background: var(--clr-bg);
+  overflow: visible;
+}
+
+@media (max-width: 768px) {
+  .main {
+    margin-left: 0;
+    padding: 80px 16px 24px;
+    overflow: visible;
+  }
+}

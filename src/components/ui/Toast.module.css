@@ -1,0 +1,40 @@
+/* Toast notification — fixed bottom-right corner */
+
+.toast {
+  position: fixed;
+  bottom: 28px;
+  right: 28px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 14px 22px;
+  border-radius: var(--radius-sm);
+  font-weight: 600;
+  font-size: 0.92rem;
+  color: #fff;
+  box-shadow: var(--shadow-lg);
+  z-index: 9999;
+  animation: slideUp 0.3s ease;
+}
+
+.success { background: var(--clr-primary); }
+.error   { background: var(--clr-danger); }
+
+.icon {
+  font-size: 1rem;
+  font-weight: 800;
+}
+
+@keyframes slideUp {
+  from { transform: translateY(20px); opacity: 0; }
+  to   { transform: translateY(0);    opacity: 1; }
+}
+
+@media (max-width: 480px) {
+  .toast {
+    bottom: 16px;
+    right: 16px;
+    left: 16px;
+    justify-content: center;
+  }
+}
