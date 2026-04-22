@@ -1,9 +1,6 @@
 # WellTrack – Health & Wellbeing Web Application
 
 **Unit:** ICT930 Advanced Web Application Development
-**Course:** Master of Information Technology (MIT)
-**Institution:** Cambridge International College of Higher Education (CIHE)
-**Semester:** Semester 1, 2026
 **Student Name:** Tashi Namgay
 
 ---
@@ -17,15 +14,9 @@ The application simulates a real-world frontend developer scenario where the bac
 ---
 
 ## Technology Stack
+<img width="667" height="247" alt="image" src="https://github.com/user-attachments/assets/3544a480-ff28-47f1-af36-b438735627b7" />
 
-| Technology | Version | Purpose |
-|---|---|---|
-| React | 18.2.0 | UI framework — functional components and hooks |
-| React Router DOM | 6.22.0 | Client-side routing and multi-page navigation |
-| Recharts | 2.12.0 | Data visualisation — bar, line, and radar charts |
-| Vite | 5.1.0 | Build tool and development server |
-| CSS Modules | Native | Scoped component-level styling |
-| ESLint | Latest | Code quality and linting |
+
 
 ---
 
